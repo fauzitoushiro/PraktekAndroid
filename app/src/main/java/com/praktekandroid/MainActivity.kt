@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         textView1.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "hai", Toast.LENGTH_LONG).show()
+
         })
 
     }
