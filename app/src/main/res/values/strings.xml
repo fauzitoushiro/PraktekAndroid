@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PraktekAndroid</string>
+    <string name="hitung">HITUNG</string>
+    <string name="tinggi">Tinggi</string>
 </resources>
