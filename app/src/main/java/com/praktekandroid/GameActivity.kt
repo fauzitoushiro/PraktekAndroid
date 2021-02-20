@@ -8,14 +8,23 @@ import android.os.Handler
 import kotlinx.android.synthetic.main.activity_game.*
 import java.util.*
 
+
 private const val BATU = 1
 private const val GUNTING = 2
 private const val KERTAS = 3
 
 class GameActivity : AppCompatActivity() {
+
+    companion object{
+        const val EXTRA_USER = "username"
+    }
+
+    var username:String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        username = intent.getStringExtra(EXTRA_USER).toString()
 
         var pilihanKomputer:Int
         var pilihanPlayer:Int
@@ -69,11 +78,11 @@ class GameActivity : AppCompatActivity() {
         if ((pilihanPlayer == BATU && pilihanKomputer == KERTAS) ||
            (pilihanPlayer == GUNTING && pilihanKomputer == BATU) ||
            (pilihanPlayer == KERTAS && pilihanKomputer == GUNTING)) {
-            hasil = "YOU LOSE"
+            hasil = username + " LOSE"
             textHasil.setTextColor(Color.RED)
         }
          else {
-            hasil = "YOU WIN"
+            hasil = username + " WIN"
             textHasil.setTextColor(Color.YELLOW)
         }
 
