@@ -26,5 +26,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity,HitungActivity::class.java)
             startActivity(intent)
         }
+
+        button2.setOnClickListener{
+            val intent = Intent(this@MainActivity,GameActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
